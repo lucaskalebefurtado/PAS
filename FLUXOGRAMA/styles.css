@@ -1,0 +1,85 @@
+.div{
+	width: 135px;
+	height: 700px;
+    padding: 5px;
+    margin: 5px;
+    float: left;
+    
+}
+
+.profissional{
+	position: relative;
+	border-style: solid;
+    border-color: black;
+	width: auto;
+	height: auto;
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+}
+
+.optativa{
+	position: relative;
+	border-style: solid;
+    border-color: yellow;
+	width: 100%;
+	height: auto;
+	vertical-align: center;
+	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+}
+
+
+.complementar{
+	position: relative;
+	border-style: dotted;
+    border-color: blue;
+	width: 100%;
+	height: auto;
+	vertical-align: center;	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+
+
+}
+
+
+.estagio{
+	position: relative;
+	border-style: solid;
+    border-color: green;
+	width: 100%;
+	height: auto;
+	vertical-align: center;
+	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+}
+
+.dependente{
+	position: relative;
+	border-style: solid;
+    border-color: green;
+    background-color: red;
+	width: 100%;
+	height: auto;
+	vertical-align: center;	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+
+}
