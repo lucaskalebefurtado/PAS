@@ -1,0 +1,21 @@
+.logozinho{
+
+	height: auto;
+	width:auto;
+	position: fixed;
+	margin-top:  300px;
+}
+.logoDaEmpresa{
+	position: fixed;
+	top: 300px;
+	margin-top:200px;
+	margin-left:20px;
+	width: 240px;
+	height: 120px; 
+ 	background-repeat: no-repeat;
+
+
+		background-image: url(images/logo.png);
+
+
+}

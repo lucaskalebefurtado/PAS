@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+	<head>
+	<link rel="stylesheet" href="{% static "css/logoEmpresa.css" %}">
+		<title>Tela de login</title>
+	</head>
+	
+	<budy>
+		<div class "logozinho">
+			<div class="logoDaempresa"></div>
+		</div>
+		<h4>Cadastro do usuário</h4>
+		
+		<form>
+			<p>Nome do usuário: </p>
+			<input type="text">
+			
+			<p>Idade: </p>
+			<input type="number"><br><br>
+			
+			Sexo: <br>
+			
+			<label> 
+				<input type="radio" name="status"> Masculino<br>
+			</label> 
+			<label> 
+				<input type="radio" name="status"> Feminino<br>
+			</label> 
+			<label> 
+				<input type="radio" name="status"> Unissex<br><br>
+			</label> 
+		
+			<input type="button" name="botao-adicionar" value="Adicionar">	
+		</form>
+	</budy>
+
+
+	<meta charset="UTF-8">
+
+</html>
