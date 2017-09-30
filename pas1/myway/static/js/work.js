@@ -1,41 +1,48 @@
+$(function(){
+	$('#poo').on('mouseover',(function(){
+    	$('#ip').addClass("dependente");
+		}));
+
+
+});
 var clicou = false;
 
 // disciplinas do primeiro período que tem dependências
 function mostraDependenciasIp(){
-	if (clicou == false) {
-		document.getElementById("lp").className = "dependente";
+	document.getElementById("ip").className = "fonte";
+	document.getElementById("lp").className = "dependente";
 
-		clicou = true;	
-		}	
-	else{
-		document.getElementById("lp").className = "profissional";
-		clicou = false;
-		
-	}
+}
+
+
+function tiraDependenciasIp(){
+	document.getElementById("ip").className = "profissional";
+	document.getElementById("lp").className = "profissional";
+
 }
 
 
 function mostraDependenciasADM1(){
-	if (clicou == false) {
-		document.getElementById("adm2").className = "dependente";
-		clicou = true;	}	
-	else{
-		document.getElementById("adm2").className = "profissional";
-		clicou = false;
-		
-	}
+	document.getElementById("adm1").className = "fonte";
+	document.getElementById("adm2").className = "dependente";
+}	
+
+function tiraDependenciasADM1(){
+	document.getElementById("adm1").className = "profissional"
+	document.getElementById("adm2").className = "profissional";
 }
 
 
+
 function mostraDependenciasIc(){
-	if (clicou == false) {
-		document.getElementById("arquitetura").className = "dependente";
-		clicou = true;	}	
-	else{
-		document.getElementById("arquitetura").className = "profissional";
-		clicou = false;
+	document.getElementById("ic").className = "fonte";
+	document.getElementById("arquitetura").className = "dependente";
+}	
+
+function tiraDependenciasIc(){
+	document.getElementById("ic").className = "profissional";
+	document.getElementById("arquitetura").className = "profissional";
 		
-	}
 }
 
 
@@ -212,10 +219,10 @@ function mostraDependenciasEsa(){
 
 function mostraDependenciasSO(){
 	if (clicou == false) {
-		document.getElementById("sd").className = "dependente";
+		document.getElementById("SD").className = "dependente";
 		clicou = true;	}	
 	else{
-		document.getElementById("sd").className = "complementar";
+		document.getElementById("SD").className = "complementar";
 		clicou = false;
 		
 	}
