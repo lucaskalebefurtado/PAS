@@ -506,12 +506,7 @@ $(function(){
 	$('#gerenciaDeProjeto').on('mouseenter',(function(){
 		$('#engenharia').addClass("dependente");
 		$(this).addClass("fonte");
-		$('#tcc').addClass("dependente");
-		
-		
-	
-
-	
+		$('#tcc').addClass("dependente");	
 	}));
 
 
@@ -523,6 +518,542 @@ $(function(){
 		$('#engenharia').removeClass("dependente");
 		$('#tcc').removeClass("dependente");
 		
+    	
+    	
+		}));
+
+
+});
+
+
+//sd
+$(function(){
+	$('#sd').on('mouseenter',(function(){		
+		$(this).addClass("fonte");
+		$('#so').addClass("dependente");
+		$('#redes').addClass("dependente");
+}));
+
+
+});
+
+$(function(){
+	$('#sd').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#so').removeClass("dependente");
+		$('#redes').removeClass("dependente");
+		
+    	
+    	
+		}));
+
+
+});
+
+
+//linear
+
+$(function(){
+	$('#linear').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#calculo').addClass("dependente");
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#linear').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#calculo').removeClass("dependente");
+	}));
+    	
+
+
+});
+
+//plp
+$(function(){
+	$('#plp').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#lp').addClass("dependente");
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#plp').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#lp').removeClass("dependente");
+	}));
+    	
+
+
+});
+
+//poo
+$(function(){
+	$('#poo').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#lp').addClass("dependente");
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#poo').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#lp').removeClass("dependente");
+	}));
+    	
+
+
+});
+
+
+//empreendedorismo
+$(function(){
+	$('#empreendedorismo').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#empreendedorismo').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+
+	}));
+    	
+
+
+});
+
+
+//psicologia
+$(function(){
+	$('#psicologia').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#psicologia').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+
+	}));
+    	
+
+
+});
+
+//etica
+$(function(){
+	$('#etica').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		
+		
+	}));
+
+
+});
+
+$(function(){
+	$('#etica').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+
+	}));
+    	
+
+
+});
+
+
+//estrutura
+$(function(){
+	$('#estrutura2').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#estrutura1').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#estrutura2').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#estrutura1').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//pesquisaaplicada
+$(function(){
+	$('#pesquisaAplicada').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#metodologia').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#pesquisaAplicada').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#metodologia').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//banco 2
+$(function(){
+	$('#banco2').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#banco1').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#banco2').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#banco1').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//ihc
+$(function(){
+	$('#ihm').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#engenharia').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#ihm').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#engenharia').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//ihc
+$(function(){
+	$('#pas').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#esa').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#pas').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#esa').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//ihc
+$(function(){
+	$('#ads').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#estatistica').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#ads').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#estatistica').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//gerenciaDeRedes
+$(function(){
+	$('#gerenciaDeRedes').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#redes').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#gerenciaDeRedes').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#redes').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//gestao 
+$(function(){
+	$('#gi').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#adm2').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#gi').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#adm2').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//corporativos
+$(function(){
+	$('#corporativos').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#banco1').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#corporativos').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#banco1').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//gqs
+$(function(){
+	$('#gqs').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#engenharia').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#gqs').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#engenharia').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+//auditoria
+$(function(){
+	$('#auditoria').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#redes').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#auditoria').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#redes').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//sag
+$(function(){
+	$('#sag').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#adm2').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#sag').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#adm2').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//ia
+$(function(){
+	$('#ia').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#logica').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#ia').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#logica').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//estagio
+$(function(){
+	$('#estagio').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#engenharia').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#estagio').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#engenharia').removeClass("dependente");
+    	
+    	
+		}));
+
+
+});
+
+
+//tcc
+$(function(){
+	$('#tcc').on('mouseenter',(function(){
+		$(this).addClass("fonte");
+		$('#gerenciaDeProjeto').addClass("dependente");
+		
+		
+
+	
+	}));
+
+
+});
+
+$(function(){
+	$('#tcc').on('mouseleave',(function(){
+		$(this).removeClass("fonte");
+		$('#gerenciaDeProjeto').removeClass("dependente");
     	
     	
 		}));
