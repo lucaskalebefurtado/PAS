@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
 {% load staticfiles %}
 
 
@@ -29,13 +29,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">Home</a>
+     
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#myPage">HOME</a></li>
         <li><a href="#schedules">FLUXOGRAMA</a></li>
+        <li><a href="#about">SOBRE</a></li>
+        <li><a href="#team">EQUIPE</a></li>
         <li><a href="#login">LOGIN</a></li>
+
       </ul>
     </div>
   </div>
@@ -43,51 +46,15 @@
 
 <div class="jumbotron text-center">
   <div class="logotipo"> 
-  	<img src="{% static 'myway/images/logo.png' %}">
+  	<img src="{% static 'images/logo.png' %}">
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>About Company Page</h2><br>
-      <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><button class="btn btn-default btn-lg">Get in Touch</button>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
-
-<div class="container-fluid bg-grey">
-  <div class="row">
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Our Values</h2><br>
-      <h4><strong>MISSION:</strong> Our mission lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4><br>
-      <p><strong>VISION:</strong> Our vision Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-  </div>
-</div>
 
 
 <!-- Container (schedules Section) -->
 <div id="schedules" class="container-fluid text-center bg-grey">
-{% load staticfiles %}
-
-  
-
-
-  <body class= "corpo">
-
-
-  <div class="div"> 
+   <div class="div"> 
   	<div class="profissional" id = "ip">Introdução a Programação</div>
   	<div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
   	<div class="profissional" id= "ic"> Introdução ao Computador</div> 
@@ -167,9 +134,57 @@
   	<div class="estagio" id= "estagio"> Estágio Supervisionado</div> 
   </div>
 
+  
+
 
 
 </div>
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Sobre o curso</h2><br>
+      <h4>O curso de Bacharelado em Sistemas de Informação tem por objetivo a formação de profissionais para atuar em planejamento, análise, utilização e avaliação de modernas tecnologias de informação aplicadas às áreas administrativas e industriais, em organizações públicas e privadas, desempenhando funções como:</h4><br>
+      <p><li>Administrador de banco de dados;</li>
+			<li>Analista de sistemas;</li>
+			<li>Analista de suporte;</li>
+			<li>Consultor/auditor em desenvolvimento de sistemas de informação;</li>
+			<li>Consultor/auditor na área de infra-estrutura;</li>
+			<li>Gerente de desenvolvimento de sistemas de informação;</li>
+			<li>Gerente de projetos de sistemas de informação;</li>
+			<li>Gerente de redes de computadores;</li>
+			<li>Gerente de sistemas de informação;</li>
+			<li>Gerente de tecnologia da informação;</li>
+			<li>Programador de sistemas;</li>
+			<li>Projetista de sistemas de automação comercial..</li></p>
+      <br><a href= "https://si.dcx.ufpb.br/curso/" class="btn btn-default btn-lg" >Saiba mais</a>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div id= "team" class="container-fluid bg-grey">
+  <div class="row">
+    <div  class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Equipe</h2><br>
+      <h4><strong>Desenvoldores:</strong> 
+      Lucas Kalebe Silva Furtado, Stewen Soares Ascari, Alberis Ricardo Tavares Filho, Kevin Nascimento de Freitas
+      <h4><strong>Professor orientador:</strong> 
+      Yuri Malheiros
+    </div>
+  </div>
+</div>
+
+
+
+
 <div id="login" class="container-fluid text-center bg-grey">
  <div class="box-parent-login">
   <div class="well bg-white box-login">
