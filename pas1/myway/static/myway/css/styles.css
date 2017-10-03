@@ -1,0 +1,90 @@
+.div{
+	width: 135px;
+	height: auto;
+    padding: 10px;
+    float: left;
+ }
+
+
+
+.profissional{
+	position: relative;
+	border-style: solid;
+    border-color: black;
+	width: 100%;
+	height: 100%;
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+	background-color: #CFD8DC;
+}
+
+.optativa{
+	position: relative;
+	border-style: solid;
+    border-color: yellow;
+	width: 100%;
+	height: auto;
+	vertical-align: center;	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+}
+
+
+.complementar{
+	position: relative;
+	border-style: dotted;
+    border-color: blue;
+	width: 100%;
+	height: auto;
+	vertical-align: center;	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+
+
+}
+
+
+.estagio{
+	position: relative;
+	border-style: solid;
+    border-color: green;
+	width: 100%;
+	height: auto;
+	vertical-align: center;
+	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+}
+
+.dependente{
+	position: relative;
+	border-style: solid;
+    border-color: green;
+    background-color: red;
+	width: 100%;
+	height: auto;
+	vertical-align: center;	
+	font-family: Helvetica;
+	vertical-align: center;
+	text-align: center;
+	border-radius: 10px;
+	margin-bottom: 20PX;
+
+}
+
+.fonte{
+	background-color: green;
+
+}
