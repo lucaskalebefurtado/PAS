@@ -9,3 +9,6 @@ from django.http import HttpResponse
 def index(request):
     return render(request,'myway/index.html')
 
+def login(request):
+	return render(request,'myway/login.html')
+
