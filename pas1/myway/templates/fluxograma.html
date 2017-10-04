@@ -1,59 +1,20 @@
+{% extends 'index.html' %}
 <!DOCTYPE html>
 <html lang="en">
-
-{% load staticfiles %}
-
-
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>My Way</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% load static %}
+ {% block contentone %}
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src = "{% static "js/jquery.js" %}">></script>
   <link rel="stylesheet" href="{% static "css/styles.css" %}">
+  <head href= index.html>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
   
-  </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <title>My Way</title>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-     
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#schedules">FLUXOGRAMA</a></li>
-        <li><a href="#about">SOBRE</a></li>
-        <li><a href="#team">EQUIPE</a></li>
-        <li><a href="login.htm">LOGIN</a></li>
+       
 
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<div class="jumbotron text-center">
-  <div class="logotipo"> 
-  	<img src="{% static 'images/logo.png' %}">
-  </div>
-</div>
-
-
-
-<!-- Container (schedules Section) -->
-<div id="schedules" class="container-fluid text-center bg-grey">
+        	<div id="schedules" class="container-fluid text-center bg-grey">
    <div class="div"> 
   	<div class="profissional" id = "ip">Introdução a Programação</div>
   	<div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
@@ -139,56 +100,7 @@
 
 
 </div>
-
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>Sobre o curso</h2><br>
-      <h4>O curso de Bacharelado em Sistemas de Informação tem por objetivo a formação de profissionais para atuar em planejamento, análise, utilização e avaliação de modernas tecnologias de informação aplicadas às áreas administrativas e industriais, em organizações públicas e privadas, desempenhando funções como:</h4><br>
-      <p><li>Administrador de banco de dados;</li>
-			<li>Analista de sistemas;</li>
-			<li>Analista de suporte;</li>
-			<li>Consultor/auditor em desenvolvimento de sistemas de informação;</li>
-			<li>Consultor/auditor na área de infra-estrutura;</li>
-			<li>Gerente de desenvolvimento de sistemas de informação;</li>
-			<li>Gerente de projetos de sistemas de informação;</li>
-			<li>Gerente de redes de computadores;</li>
-			<li>Gerente de sistemas de informação;</li>
-			<li>Gerente de tecnologia da informação;</li>
-			<li>Programador de sistemas;</li>
-			<li>Projetista de sistemas de automação comercial..</li></p>
-      <br><a href= "https://si.dcx.ufpb.br/curso/" class="btn btn-default btn-lg" >Saiba mais</a>
-    </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
-    </div>
-  </div>
-</div>
-
-<div id= "team" class="container-fluid bg-grey">
-  <div class="row">
-    <div  class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Equipe</h2><br>
-      <h4><strong>Desenvoldores:</strong> 
-      Lucas Kalebe Silva Furtado, Stewen Soares Ascari, Alberis Ricardo Tavares Filho, Kevin Nascimento de Freitas
-      <h4><strong>Professor orientador:</strong> 
-      Yuri Malheiros
-    </div>
-  </div>
-</div>
-
-</div>
-
-
-
-
-
-
-
-</body>
+{% endblock contentone %}
+</head>
 </html>
+

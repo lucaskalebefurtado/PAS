@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<link rel="stylesheet" href="{% static "css/styles.css" %}">
+  {% block content %}
+
+      <div class="container-fluid bg-grey">
+      	<div class="well bg-white box-login">
+      		<form role="form">
+      			<fieldset>
+      				<div>
+      					<label for="nomeDousuario">Nome do usuário</label>
+      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Usuário">
+      				</div><br>  
+
+              <div>
+                <label class="radio-inline">
+                      <input type="radio" name="sexo" id="feminino" value="FEMININO"> Feminino
+                        </label>
+
+                        <label class="radio-inline">
+                          <input type="radio" name="sexo" id="masculino" value="MASCULINO"> Masculino
+                        </label>
+              </div>
+       
+      				<div>
+      					<label for="userPassword">Senha</label>
+      					<input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha">
+      				</div>
+              <div>
+                <label>Data de nascimento</label>
+                   <input class="form-control ls-login-bg-user input-lg" id=" dataDeNascimento" type="text" aria-label="Data de nascimento: " placeholder="dd/mm/aaa" >
+               
+              </div>
+
+              <div>
+                <label for="userLogin">Seu e-mail</label>
+                <input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="E-mail">
+
+              </div><br>
+
+              <input href="" type="submit" value="Cadastrar" class="btn btn-primary btn-lg btn-block">
+      			</fieldset>
+      		</form>
+      	</div>
+      </div>
+  {% endblock %}
+
+</html>

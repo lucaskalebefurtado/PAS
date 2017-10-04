@@ -26,10 +26,9 @@ def new(request):
 	return render(request, 'new.html', context=context_dict)
 
 
-def login(request):
-	form = LoginForm()
-	context_dict = {'form': form}
-	return render(request, 'clientes/login.html', context=context_dict)	
+def cadastrauser(request):
+	return render(request,'cadastrauser.html')
+
 
 
 

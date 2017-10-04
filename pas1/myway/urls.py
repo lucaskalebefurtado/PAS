@@ -9,5 +9,5 @@ urlpatterns = [
 
     url(r'^new', views.new, name='new'),
 
-    
-]
+	url(r'^cadastrauser', views.cadastrauser, name='cadastrauser'),  
+]	
