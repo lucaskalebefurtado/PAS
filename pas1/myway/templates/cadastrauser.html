@@ -1,19 +1,52 @@
 {% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+{% load staticfiles %}
 <link rel="stylesheet" href="{% static "css/styles.css" %}">
   {% block content %}
 
       <div class="container-fluid bg-grey">
       	<div class="well bg-white box-login">
-      		<form role="form">
+      		
+			
+			<form action="{% url 'cadastrauser' %}" method="post" role="form">
+      		<!--
       			<fieldset>
       				<div>
-      					<label for="nomeDousuario">Nome do usuário</label>
-      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Usuário">
+      					<label for="nomeDousuario">Nome: </label>
+      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Ex: João das Neves">
       				</div><br>  
-
+      				
+					<div>
+      					<label for="matricula">Matrícula: </label>
+      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Matricula" placeholder="Ex: 85625910">
+      				</div><br>
+      				
+      				<div>
+						<label for="userLogin">E-mail: </label>
+						<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Ex: joaodasneves@got.com">
+					</div><br>
+					
+					</fieldset>
+			-->			
+				<div class="field-title">
+					{% csrf_token %}
+					<label for="aluno_nome" id="aluno_nome">Nome: 
+					{{ form.nome }} </label>
+					<br><br>
+					
+					<label for="aluno_matricula">Matricula:  
+					{{ form.matricula }} </label>
+					<br><br>
+					
+					<label for="aluno_email">E-mail: 
+					{{ form.email }} </label>
+					<br><br>
+				</div>
+				<input type="submit" value="Cadastrar" class="btn btn-primary btn-lg btn-block">
+				
+			</form>
+			<!--
               <div>
                 <label class="radio-inline">
                       <input type="radio" name="sexo" id="feminino" value="FEMININO"> Feminino
@@ -23,26 +56,18 @@
                           <input type="radio" name="sexo" id="masculino" value="MASCULINO"> Masculino
                         </label>
               </div>
-       
+			
       				<div>
       					<label for="userPassword">Senha</label>
       					<input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha">
       				</div>
               <div>
                 <label>Data de nascimento</label>
-                   <input class="form-control ls-login-bg-user input-lg" id=" dataDeNascimento" type="text" aria-label="Data de nascimento: " placeholder="dd/mm/aaa" >
-               
+                   <input class="form-control ls-login-bg-user input-lg" id=" dataDeNascimento" type="text" aria-label="Data de nascimento: " placeholder="dd/mm/aaa" >         
               </div>
-
-              <div>
-                <label for="userLogin">Seu e-mail</label>
-                <input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="E-mail">
-
-              </div><br>
-
-              <input href="" type="submit" value="Cadastrar" class="btn btn-primary btn-lg btn-block">
-      			</fieldset>
+              
       		</form>
+      		-->
       	</div>
       </div>
   {% endblock %}

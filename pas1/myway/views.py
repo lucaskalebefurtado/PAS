@@ -15,19 +15,16 @@ def index(request):
 def login(request):
 	return render(request,'login.html')
 
-def new(request):
+def cadastrauser(request):
 	if request.method == 'POST':
 		form = AlunoForm(request.POST)
 		form.save()
-		return HttpResponseRedirect('new')
+		return HttpResponseRedirect('cadastrauser')
 	else:
 		form = AlunoForm()
 	context_dict = {'form': form}
-	return render(request, 'new.html', context=context_dict)
+	return render(request, 'cadastrauser.html', context=context_dict)
 
-
-def cadastrauser(request):
-	return render(request,'cadastrauser.html')
 
 
 

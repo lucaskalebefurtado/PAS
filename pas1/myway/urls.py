@@ -7,7 +7,7 @@ urlpatterns = [
 
     url(r'^login', views.login, name='login'),
 
-    url(r'^new', views.new, name='new'),
+  
 
 	url(r'^cadastrauser', views.cadastrauser, name='cadastrauser'),  
 ]	
