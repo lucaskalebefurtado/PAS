@@ -1,10 +1,12 @@
-from django.forms import ModelForm
-from myway.models import Aluno
-	
-
-class AlunoForm(ModelForm):
-	class Meta:
-		model = Aluno
-		fields = ["nome", "matricula", "email"]
+from django import forms
+from .models import Aluno
 
 
+class AlunoForm(forms.ModelForm):
+
+    class Meta:
+        model = Aluno
+        fields = ('nome', 'email', 'username', 'senha', "matricula", "sexo", "periodo")
+        widgets = {
+            'senha': forms.PasswordInput(),
+        }
