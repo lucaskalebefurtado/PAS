@@ -1,98 +1,96 @@
-{% extends 'index.html' %}
+{% extends 'base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 {% load static %}
- {% block contentone %}
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ {% block content %}
   <script src = "{% static "js/jquery.js" %}">></script>
   <link rel="stylesheet" href="{% static "css/styles.css" %}">
   <head href= index.html>
   <!-- Theme Made By www.w3schools.com - No Copyright -->
   
-  <title>My Way</title>
+  <title>Fluxograma</title>
 
        
 
-        	<div id="schedules" class="container-fluid text-center bg-grey">
+          <div id="schedules" class="container-fluid text-center bg-grey" style="padding:70px 16px">
    <div class="div"> 
-  	<div class="profissional" id = "ip">Introdução a Programação</div>
-  	<div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
-  	<div class="profissional" id= "ic"> Introdução ao Computador</div> 
-  	<div class="complementar" id= "metodologia"> Metodologia Científica</div> 
-  	<div class="profissional" id= "adm1"> Administração I</div> 
-  	<div class="profissional" id= "elementar">Matemática Elementar</div>
+    <div class="profissional" id = "ip">Introdução a Programação</div>
+    <div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
+    <div class="profissional" id= "ic"> Introdução ao Computador</div> 
+    <div class="complementar" id= "metodologia"> Metodologia Científica</div> 
+    <div class="profissional" id= "adm1"> Administração I</div> 
+    <div class="profissional" id= "elementar">Matemática Elementar</div>
   </div>
 
 
   <div class="div"> 
 
 
-  	<div class="profissional" id = "lp"> Linguagem de Programação</div>	
-  	<div class="profissional" id = "filosofia">Introdução a Filosofia</div> 
-  	<div class="profissional" id= "calculo" > Cálculo Diferencial e Integral</div> 
-  	<div class="profissional" id = "arquitetura" > Arquitetura de Computadores</div> 
-  	<div class="profissional" id= "adm2" > Administração II</div> 
-  	<div class="profissional" id = "logica"> Lógica aplicada a Computação</div> 
+    <div class="profissional" id = "lp"> Linguagem de Programação</div> 
+    <div class="profissional" id = "filosofia">Introdução a Filosofia</div> 
+    <div class="profissional" id= "calculo" > Cálculo Diferencial e Integral</div> 
+    <div class="profissional" id = "arquitetura" > Arquitetura de Computadores</div> 
+    <div class="profissional" id= "adm2" > Administração II</div> 
+    <div class="profissional" id = "logica"> Lógica aplicada a Computação</div> 
 
 
   </div>
 
   <div class="div"> 
 
-  	<div class="profissional" id = "estrutura1"> Estrutura de Dados I</div>	
-  	<div class="profissional" id = "poo"> Programação Orientada a Objetos</div> 
-  	<div class="profissional" id= "estatistica"> Probabilidade e Estatística</div> 
-  	<div class="profissional" id = "linear"> Álgebra Linear</div> 
-  	<div class="optativa"> Optativa</div> 
+    <div class="profissional" id = "estrutura1"> Estrutura de Dados I</div> 
+    <div class="profissional" id = "poo"> Programação Orientada a Objetos</div> 
+    <div class="profissional" id= "estatistica"> Probabilidade e Estatística</div> 
+    <div class="profissional" id = "linear"> Álgebra Linear</div> 
+    <div class="optativa"> Optativa</div> 
   </div>
 
   <div class="div"> 
 
-  	<div class="profissional" id = "estrutura2">Estrutura de Dados II</div>	
-  	<div class="profissional" id= "engenharia">Engenharia de Software</div> 
-  	<div class="profissional" id= "plp">Paradigmas de Linguagem de Programação</div> 
-  	<div class="profissional" id = "empreendedorismo">Empreende-dorismo</div> 
-  	<div class="profissional" id = "psicologia">Introdução a psicologia</div> 
-  	<div class="optativa"> Optativa</div> 
-  	
+    <div class="profissional" id = "estrutura2">Estrutura de Dados II</div> 
+    <div class="profissional" id= "engenharia">Engenharia de Software</div> 
+    <div class="profissional" id= "plp">Paradigmas de Linguagem de Programação</div> 
+    <div class="profissional" id = "empreendedorismo">Empreende-dorismo</div> 
+    <div class="profissional" id = "psicologia">Introdução a psicologia</div> 
+    <div class="optativa"> Optativa</div> 
+    
 
   </div>
 
   <div class="div"> 
-  	<div class="profissional" id= "banco1" > Banco de Dados I</div>	
-  	<div class="complementar" id= "esa" > Engenharia de Software Aplicada</div> 
-  	<div class= "complementar" id = "etica"> Ética Profissional </div>
-  	<div class= "profissional" id= "so"> Sistemas Operacionais</div> 
-  	<div class="complementar" id= "pesquisaAplicada"> Pesquisa Aplicada</div> 
-  	<div class="profissional" id= "redes"> Redes de Computadores </div>
+    <div class="profissional" id= "banco1" > Banco de Dados I</div> 
+    <div class="complementar" id= "esa" > Engenharia de Software Aplicada</div> 
+    <div class= "complementar" id = "etica"> Ética Profissional </div>
+    <div class= "profissional" id= "so"> Sistemas Operacionais</div> 
+    <div class="complementar" id= "pesquisaAplicada"> Pesquisa Aplicada</div> 
+    <div class="profissional" id= "redes"> Redes de Computadores </div>
   </div>
 
   <div class="div"> 
-  	<div class="profissional" id= "banco2">Banco de dados II</div>	
-  	<div class="profissional" id="gerenciaDeProjeto"> Gerência de Projeto de Software</div> 
-  	<div class="complementar" id= "ihm">Interface com o Usuário</div> 
-  	<div class="profissional" id= "pas"> Projeto Avançado de Software</div> 
-  	<div class="profissional" id="ads"> Avaliação de desempenho de Sistemas</div> 
-  	<div class="profissional" id = "gerenciaDeRedes" >Gerência de redes de Computadores</div> 
-  	<div class="profissional" id="gi"> Gestão da Informação de Sistemas de Informação</div> 
-  	
+    <div class="profissional" id= "banco2">Banco de dados II</div>  
+    <div class="profissional" id="gerenciaDeProjeto"> Gerência de Projeto de Software</div> 
+    <div class="complementar" id= "ihm">Interface com o Usuário</div> 
+    <div class="profissional" id= "pas"> Projeto Avançado de Software</div> 
+    <div class="profissional" id="ads"> Avaliação de desempenho de Sistemas</div> 
+    <div class="profissional" id = "gerenciaDeRedes" >Gerência de redes de Computadores</div> 
+    <div class="profissional" id="gi"> Gestão da Informação de Sistemas de Informação</div> 
+    
   </div>
 
   <div class="div">
-  	<div class="complementar" id= "corporativos"> Desenvolvimento de Sistemas Corporativos</div>	
-  	<div class="complementar" id= "gqs"> Gestão da Qualidade de Software</div>	
-  	<div class="optativa"> Optativa</div> 
-  	<div class="complementar" id= "sd"> Sistemas Distribuídos</div> 
-  	<div class="complementar" id= "auditoria">Auditoria e Segurança de Sistemas</div> 
-  	<div class="complementar" id= "sag"> Sistemas de Apoio a Gestão</div> 
-  	<div class="complementar" id= "ia">Inteligência Artificial e Sistemas Especialistas</div> 
-  	
-  	
+    <div class="complementar" id= "corporativos"> Desenvolvimento de Sistemas Corporativos</div>  
+    <div class="complementar" id= "gqs"> Gestão da Qualidade de Software</div>  
+    <div class="optativa"> Optativa</div> 
+    <div class="complementar" id= "sd"> Sistemas Distribuídos</div> 
+    <div class="complementar" id= "auditoria">Auditoria e Segurança de Sistemas</div> 
+    <div class="complementar" id= "sag"> Sistemas de Apoio a Gestão</div> 
+    <div class="complementar" id= "ia">Inteligência Artificial e Sistemas Especialistas</div> 
+    
+    
   </div>
   <div class="div"> 
-  	<div class="profissional" id= "tcc">TCC</div> 
-  	<div class="estagio" id= "estagio"> Estágio Supervisionado</div> 
+    <div class="profissional" id= "tcc">TCC</div> 
+    <div class="estagio" id= "estagio"> Estágio Supervisionado</div> 
   </div>
 
   
@@ -100,7 +98,7 @@
 
 
 </div>
-{% endblock contentone %}
+{% endblock content %}
 </head>
 </html>
 

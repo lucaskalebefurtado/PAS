@@ -15,6 +15,10 @@ def index(request):
 def login(request):
 	return render(request,'login.html')
 
+def fluxograma(request):
+	return render(request,'fluxograma.html')
+
+
 def cadastro(request):
 	if request.method == 'POST':
 		form = AlunoForm(request.POST)

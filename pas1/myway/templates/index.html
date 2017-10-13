@@ -1,191 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 {% load staticfiles %}
+<title>My Way</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-<head>
-  <!-- Theme Made By www.w3schools.com - No Copyright -->
-  <title>My Way</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src = "{% static "js/jquery.js" %}">></script>
-  <link rel="stylesheet" href="{% static "css/styles.css" %}">
-  
-  </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-     
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#bb" class="w3-bar-item w3-button">Início</a>
+      <a href="fluxograma.html" class="w3-bar-item w3-button"><i class=""></i> FLUXOGRAMA</a>
+      <a href="#sobre" class="w3-bar-item w3-button"></i> SOBRE</a>
+      <a href="#equipe" class="w3-bar-item w3-button"><i class="fa fa-pinterest-p"></i> EQUIPE</a>
+      <a href="login.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOGIN</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#myPage">HOME</a></li>
-        <li><a href="#schedules">FLUXOGRAMA</a></li>
-        <li><a href="#about">SOBRE</a></li>
-        <li><a href="#team">EQUIPE</a></li>
-      </ul>
-    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">Início</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">Equipe</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 
-<div class="jumbotron text-center">
-  <div class="logotipo"> 
-  	<img src="{% static 'images/logo.png' %}">
-  </div>
+<!-- Pricing Section -->
+<div class="container-fluid text-center bg-grey"  id="fluxograma">
 </div>
 
-
-
-<!-- Container (schedules Section) -->
-<div id="schedules" class="container-fluid text-center bg-grey">
-   <div class="div"> 
-  	<div class="profissional" id = "ip">Introdução a Programação</div>
-  	<div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
-  	<div class="profissional" id= "ic"> Introdução ao Computador</div> 
-  	<div class="complementar" id= "metodologia"> Metodologia Científica</div> 
-  	<div class="profissional" id= "adm1"> Administração I</div> 
-  	<div class="profissional" id= "elementar">Matemática Elementar</div>
-  </div>
-
-
-  <div class="div"> 
-
-
-  	<div class="profissional" id = "lp"> Linguagem de Programação</div>	
-  	<div class="profissional" id = "filosofia">Introdução a Filosofia</div> 
-  	<div class="profissional" id= "calculo" > Cálculo Diferencial e Integral</div> 
-  	<div class="profissional" id = "arquitetura" > Arquitetura de Computadores</div> 
-  	<div class="profissional" id= "adm2" > Administração II</div> 
-  	<div class="profissional" id = "logica"> Lógica aplicada a Computação</div> 
-
-
-  </div>
-
-  <div class="div"> 
-
-  	<div class="profissional" id = "estrutura1"> Estrutura de Dados I</div>	
-  	<div class="profissional" id = "poo"> Programação Orientada a Objetos</div> 
-  	<div class="profissional" id= "estatistica"> Probabilidade e Estatística</div> 
-  	<div class="profissional" id = "linear"> Álgebra Linear</div> 
-  	<div class="optativa"> Optativa</div> 
-  </div>
-
-  <div class="div"> 
-
-  	<div class="profissional" id = "estrutura2">Estrutura de Dados II</div>	
-  	<div class="profissional" id= "engenharia">Engenharia de Software</div> 
-  	<div class="profissional" id= "plp">Paradigmas de Linguagem de Programação</div> 
-  	<div class="profissional" id = "empreendedorismo">Empreende-dorismo</div> 
-  	<div class="profissional" id = "psicologia">Introdução a psicologia</div> 
-  	<div class="optativa"> Optativa</div> 
-  	
-
-  </div>
-
-  <div class="div"> 
-  	<div class="profissional" id= "banco1" > Banco de Dados I</div>	
-  	<div class="complementar" id= "esa" > Engenharia de Software Aplicada</div> 
-  	<div class= "complementar" id = "etica"> Ética Profissional </div>
-  	<div class= "profissional" id= "so"> Sistemas Operacionais</div> 
-  	<div class="complementar" id= "pesquisaAplicada"> Pesquisa Aplicada</div> 
-  	<div class="profissional" id= "redes"> Redes de Computadores </div>
-  </div>
-
-  <div class="div"> 
-  	<div class="profissional" id= "banco2">Banco de dados II</div>	
-  	<div class="profissional" id="gerenciaDeProjeto"> Gerência de Projeto de Software</div> 
-  	<div class="complementar" id= "ihm">Interface com o Usuário</div> 
-  	<div class="profissional" id= "pas"> Projeto Avançado de Software</div> 
-  	<div class="profissional" id="ads"> Avaliação de desempenho de Sistemas</div> 
-  	<div class="profissional" id = "gerenciaDeRedes" >Gerência de redes de Computadores</div> 
-  	<div class="profissional" id="gi"> Gestão da Informação de Sistemas de Informação</div> 
-  	
-  </div>
-
-  <div class="div">
-  	<div class="complementar" id= "corporativos"> Desenvolvimento de Sistemas Corporativos</div>	
-  	<div class="complementar" id= "gqs"> Gestão da Qualidade de Software</div>	
-  	<div class="optativa"> Optativa</div> 
-  	<div class="complementar" id= "sd"> Sistemas Distribuídos</div> 
-  	<div class="complementar" id= "auditoria">Auditoria e Segurança de Sistemas</div> 
-  	<div class="complementar" id= "sag"> Sistemas de Apoio a Gestão</div> 
-  	<div class="complementar" id= "ia">Inteligência Artificial e Sistemas Especialistas</div> 
-  	
-  	
-  </div>
-  <div class="div"> 
-  	<div class="profissional" id= "tcc">TCC</div> 
-  	<div class="estagio" id= "estagio"> Estágio Supervisionado</div> 
-  </div>
-
-  
-
-
-
-</div>
-
-
-<!-- Container (About Section) -->
-<div id="about" class="container-fluid">
-  <div class="row">
-    <div class="col-sm-8">
-      <h2>Sobre o curso</h2><br>
-      <h4>O curso de Bacharelado em Sistemas de Informação tem por objetivo a formação de profissionais para atuar em planejamento, análise, utilização e avaliação de modernas tecnologias de informação aplicadas às áreas administrativas e industriais, em organizações públicas e privadas, desempenhando funções como:</h4><br>
+<!-- About Section -->
+<div class="w3-container" style="padding:10px 16px" id="sobre"><br><br>
+  <div class="w3-row-padding w3-center">
+    <h2>Sobre o curso</h2>
+      <h4>O curso de Bacharelado em Sistemas de Informação tem por objetivo a formação de profissionais para atuar em planejamento, análise, utilização e avaliação de modernas tecnologias de informação aplicadas às áreas administrativas e industriais, em organizações públicas e privadas, desempenhando funções como:</h4>
       <p><li>Administrador de banco de dados;</li>
-			<li>Analista de sistemas;</li>
-			<li>Analista de suporte;</li>
-			<li>Consultor/auditor em desenvolvimento de sistemas de informação;</li>
-			<li>Consultor/auditor na área de infra-estrutura;</li>
-			<li>Gerente de desenvolvimento de sistemas de informação;</li>
-			<li>Gerente de projetos de sistemas de informação;</li>
-			<li>Gerente de redes de computadores;</li>
-			<li>Gerente de sistemas de informação;</li>
-			<li>Gerente de tecnologia da informação;</li>
-			<li>Programador de sistemas;</li>
-			<li>Projetista de sistemas de automação comercial..</li></p>
-      <br><a href= "https://si.dcx.ufpb.br/curso/" class="btn btn-default btn-lg" >Saiba mais</a>
+      <li>Analista de sistemas;</li>
+      <li>Analista de suporte;</li>
+      <li>Consultor/auditor em desenvolvimento de sistemas de informação;</li>
+      <li>Consultor/auditor na área de infra-estrutura;</li>
+      <li>Gerente de desenvolvimento de sistemas de informação;</li>
+      <li>Gerente de projetos de sistemas de informação;</li>
+      <li>Gerente de redes de computadores;</li>
+      <li>Gerente de sistemas de informação;</li>
+      <li>Gerente de tecnologia da informação;</li>
+      <li>Programador de sistemas;</li>
+      <li>Projetista de sistemas de automação comercial..</li></p>
+      <a href= "https://si.dcx.ufpb.br/curso/" class="btn btn-default btn-lg" >Saiba mais</a>
+  </div>
+</div>
+
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:70px 16px" id="equipe">
+  <h3 class="w3-center">EQUIPE</h3>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:20px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="{% static 'images/Alberis.jpg' %}" alt="Alberis" style="width:100%">
+        <div class="w3-container">
+          <h3>Alberis Ricardo</h3>
+          <p class="w3-opacity">Desenvolvedor de software</p>
+          <p>Estudante de Sistemas de Informação na UFPB</p>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4">
-      <span class="glyphicon glyphicon-signal logo"></span>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="{% static 'images/kevin.jpg' %}" alt="Kevin" style="width:100%">
+        <div class="w3-container">
+          <h3>Kevin Freitas</h3>
+          <p class="w3-opacity">Desenvolvedor de software</p>
+          <p>Estudante de Sistemas de Informação na UFPB</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="{% static 'images/Kaleb.jpg' %}" alt="Kaleb" style="width:100%">
+        <div class="w3-container">
+          <h3>Lucas Kaleb</h3>
+          <p class="w3-opacity">Desenvolvedor de software</p>
+          <p>Estudante de Sistemas de Informação na UFPB</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card-2">
+        <img src="{% static 'images/Stewen.png' %}" alt="Stewen" style="width:100%">
+        <div class="w3-container">
+          <h3>Stewen Ascari</h3>
+          <p class="w3-opacity">Desenvolvedor de software</p>
+          <p>Estudante de Sistemas de Informação na UFPB</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
 
-<div id= "team" class="container-fluid bg-grey">
-  <div class="row">
-    <div  class="col-sm-4">
-      <span class="glyphicon glyphicon-globe logo slideanim"></span>
-    </div>
-    <div class="col-sm-8">
-      <h2>Equipe</h2><br>
-      <h4><strong>Desenvoldores:</strong> 
-      Lucas Kalebe Silva Furtado, Stewen Soares Ascari, Alberis Ricardo Tavares Filho, Kevin Nascimento de Freitas
-      <h4><strong>Professor orientador:</strong> 
-      Yuri Malheiros
-    </div>
 
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="login">
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+    
+    </div>
   </div>
 </div>
-</div>
-
-
-
-
-
 
 
 </body>
