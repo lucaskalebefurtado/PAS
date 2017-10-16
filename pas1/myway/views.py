@@ -41,7 +41,7 @@ def user_login(request):
 def restricted_area(request):
 	return render(request, 'restrita.html')
 
-@login_required
+
 def fluxograma(request):
 	return render(request,'fluxograma.html')
 
