@@ -4,7 +4,9 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-	url(r'^login', views.login, name='login'),
+	url(r'^login', views.user_login, name='login'),
 	url(r'^cadastro', views.cadastro, name='cadastro'), 
 	url (r'^fluxograma', views.fluxograma, name='fluxograma'), 
+	
+	url(r'^restrita', views.restricted_area,name='restrited_area'),
 ]	

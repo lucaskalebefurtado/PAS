@@ -1,12 +1,12 @@
 from django import forms
-from .models import Aluno
+from .models import Cliente
 
 
-class AlunoForm(forms.ModelForm):
+class AlunoForm(forms.Form):
+	username = forms.CharField(label='username',)
+	password = forms.CharField(label='Senha')
+class LoginForm(forms.Form):
+	username = forms.CharField(label='username',)
+	password = forms.CharField(label='Senha')
 
-    class Meta:
-        model = Aluno
-        fields = ('nome', 'email', 'username', 'senha', "matricula", "sexo", "periodo")
-        widgets = {
-            'senha': forms.PasswordInput(),
-        }
+

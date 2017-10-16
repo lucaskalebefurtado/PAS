@@ -2,8 +2,8 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from myway.models import Aluno
+from myway.models import Cliente
 # Register your models here.
 
 
-admin.site.register(Aluno)
+admin.site.register(Cliente)

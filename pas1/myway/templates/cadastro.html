@@ -1,68 +1,37 @@
 {% extends 'base.html' %}
-<!DOCTYPE html>
-<html lang="en">
-{% load staticfiles %}
-<link rel="stylesheet" href="{% static "css/styles.css" %}">
-  {% block content %}
 
-      <div class="container-fluid bg-grey">
-      	<div class="well bg-white box-login">
+
+{% load staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+      <div class="container">
+      	<div class="form-horizontal">
       		
 			
-			<form action="{% url 'cadastro' %}" method="post" role="form">
-      		<!--
-      			<fieldset>
-      				<div>
-      					<label for="nomeDousuario">Nome: </label>
-      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Ex: João das Neves">
-      				</div><br>  
-      				
-					<div>
-      					<label for="matricula">Matrícula: </label>
-      					<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Matricula" placeholder="Ex: 85625910">
-      				</div><br>
-      				
-      				<div>
-						<label for="userLogin">E-mail: </label>
-						<input class="form-control ls-login-bg-user input-lg" id="userLogin" type="text" aria-label="Usuário" placeholder="Ex: joaodasneves@got.com">
-					</div><br>
-					
-					</fieldset>
-			-->			
-			<div class="field-title">
+			<form class="form-horizontal" action="{% url 'cadastro' %}" method="post" role="form">
+      		<div class="field-title"><br><br><br><br>
 					{% csrf_token %}
 					<label for="aluno_nome" id="aluno_nome">Nome: 
-					{{ form.nome }} </label>
-					<br><br>
-
-					<label for="aluno_username" id="aluno_user">Nome de usuário: 
 					{{ form.username }} </label>
 					<br><br>
 
-					<label for="aluno_email" id="aluno_email">Email: 
-					{{ form.email }} </label>
-					<br><br>
-
-					<label for="aluno_matricula" id="aluno_matricula">Matrícula: 
-					{{ form.matricula }} </label>
-					<br><br>
-
 					<label for="aluno_senha" id="aluno_senha">Senha: 
-					{{ form.senha }} </label>
+					{{ form.password }} </label>
 					<br><br>
 
-					<label for="aluno_sexo" id="aluno_sexo">Sexo: 
-					{{ form.sexo }} </label>
-					<br><br>
-
-					<label for="aluno_periodo" id="aluno_período">Período: 
-					{{ form.periodo }} </label>
-					<br><br>
-
-
-
-				</div>
-				<input type="submit" value="Cadastrar" class="btn btn-primary btn-lg btn-block">
+				<div class="col-sm-offset-2 col-sm-10">
+        			<button type="submit" class="btn btn-default">cadastrar aluno</button>
+      </div>
 				
 			</form>
 			<!--
