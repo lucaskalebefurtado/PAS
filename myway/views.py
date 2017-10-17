@@ -18,25 +18,6 @@ from django.contrib.auth.models import User
 def index(request):
     return render(request,'index.html')
 
-def user_login(request):
-	if request.method == 'POST':
-		form = LoginForm(request.POST)
-		if form.is_valid():
-			matricula = form.cleaned_data['username']
-			senha = form.cleaned_data['password']
-			user = authenticate(username=matricula,
-			password=senha)
-
-			if user is not None:
-				LoginForm(request, user)
-				return HttpResponseRedirect('telauser')
-	else:
-		form = LoginForm()
-	context_dict = {'form': form}
-	return render(request, 'login.html', context=context_dict)
-def fluxograma(request):
-	return render(request,'fluxograma.html')
-
 def cadastro(request):
 	if request.method == 'POST':
 		form = AlunoForm(request.POST)
@@ -44,8 +25,9 @@ def cadastro(request):
 		if form.is_valid():
 			username = form.cleaned_data['username']
 			senha = form.cleaned_data['password']
+	
 			
-			User.objects.create_user( username=username,
+			User.objects.create_user( username=username, 
 			password=senha)
 
 			return HttpResponseRedirect('login.html')
@@ -55,6 +37,30 @@ def cadastro(request):
 	context_dict = {'form': form}
 	return render(request, 'cadastro.html', context=context_dict)
 
+def user_login(request):
+	if request.method == 'POST':
+		form = LoginForm(request.POST)
+		if form.is_valid():
+			username = form.cleaned_data['username']
+			senha = form.cleaned_data['password']
+			user = authenticate(username=username,
+			password=senha)
+
+			if user is not None:
+				login(request, user)
+				return HttpResponseRedirect('telauser')
+	else:
+		form = LoginForm()
+	context_dict = {'form': form}
+	return render(request, 'login.html', context=context_dict)
+
+
+
+def fluxograma(request):
+	return render(request,'fluxograma.html')
+
+
+
 
 @login_required
 def restricted_area(request):
@@ -63,6 +69,7 @@ def restricted_area(request):
 @login_required
 def telauser(request):
 	return render(request, 'telaUsuario.html')
+
 @login_required
 def perfil(request):
 	return render(request, 'perfil.html')
