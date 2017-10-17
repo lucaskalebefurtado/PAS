@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<title>My Way</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#MinhasDisciplinas" class="w3-bar-item w3-button">MINHAS DISCIPLINAS</a>
+      <a href="#meuFluxograma" class="w3-bar-item w3-button"><i class=""></i> MEU FLUXOGRAMA</a>
+      <a href="/myway/forumDoCurso" class="w3-bar-item w3-button"></i> FÓRUM DO CURSO</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<div>
+<title>Fluxograma</title>
+% load static %}
+ {% block content %}
+ <!-- Contact Section -->
+<div class="w3-container w3-light-grey" id="MinhasDisciplinas" style="padding:128px 16px" id="login">
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-half">
+     
+     Disciplinas vão aparecer aqui
+  </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  <script src = "{% static "js/jquery.js" %}">></script>
+  <link rel="stylesheet" href="{% static "css/styles.css" %}">
+  <head href= index.html>
+
+<div id="meuFluxograma" class="container-fluid text-center bg-grey" style="padding:70px 16px">
+   <div class="periodo"> 
+    <div class="profissional" id = "ip">Introdução a Programação</div>
+    <div class="profissional" id = "sociologia"> Introdução a Sociologia</div> 
+    <div class="profissional" id= "ic"> Introdução ao Computador</div> 
+    <div class="complementar" id= "metodologia"> Metodologia Científica</div> 
+    <div class="profissional" id= "adm1"> Administração I</div> 
+    <div class="profissional" id= "elementar">Matemática Elementar</div>
+  </div>
+
+
+  <div class="periodo"> 
+
+
+    <div class="profissional" id = "lp"> Linguagem de Programação</div> 
+    <div class="profissional" id = "filosofia">Introdução a Filosofia</div> 
+    <div class="profissional" id= "calculo" > Cálculo Diferencial e Integral</div> 
+    <div class="profissional" id = "arquitetura" > Arquitetura de Computadores</div> 
+    <div class="profissional" id= "adm2" > Administração II</div> 
+    <div class="profissional" id = "logica"> Lógica aplicada a Computação</div> 
+
+
+  </div>
+
+  <div class="periodo"> 
+
+    <div class="profissional" id = "estrutura1"> Estrutura de Dados I</div> 
+    <div class="profissional" id = "poo"> Programação Orientada a Objetos</div> 
+    <div class="profissional" id= "estatistica"> Probabilidade e Estatística</div> 
+    <div class="profissional" id = "linear"> Álgebra Linear</div> 
+    <div class="optativa"> Optativa</div> 
+  </div>
+
+  <div class="periodo"> 
+
+    <div class="profissional" id = "estrutura2">Estrutura de Dados II</div> 
+    <div class="profissional" id= "engenharia">Engenharia de Software</div> 
+    <div class="profissional" id= "plp">Paradigmas de Linguagem de Programação</div> 
+    <div class="profissional" id = "empreendedorismo">Empreende-dorismo</div> 
+    <div class="profissional" id = "psicologia">Introdução a psicologia</div> 
+    <div class="optativa"> Optativa</div> 
+    
+
+  </div>
+
+  <div class="periodo"> 
+    <div class="profissional" id= "banco1" > Banco de Dados I</div> 
+    <div class="complementar" id= "esa" > Engenharia de Software Aplicada</div> 
+    <div class= "complementar" id = "etica"> Ética Profissional </div>
+    <div class= "profissional" id= "so"> Sistemas Operacionais</div> 
+    <div class="complementar" id= "pesquisaAplicada"> Pesquisa Aplicada</div> 
+    <div class="profissional" id= "redes"> Redes de Computadores </div>
+  </div>
+
+  <div class="periodo"> 
+    <div class="profissional" id= "banco2">Banco de dados II</div>  
+    <div class="profissional" id="gerenciaDeProjeto"> Gerência de Projeto de Software</div> 
+    <div class="complementar" id= "ihm">Interface com o Usuário</div> 
+    <div class="profissional" id= "pas"> Projeto Avançado de Software</div> 
+    <div class="profissional" id="ads"> Avaliação de desempenho de Sistemas</div> 
+    <div class="profissional" id = "gerenciaDeRedes" >Gerência de redes de Computadores</div> 
+    <div class="profissional" id="gi"> Gestão da Informação de Sistemas de Informação</div> 
+    
+  </div>
+
+  <div class="periodo">
+    <div class="complementar" id= "corporativos"> Desenvolvimento de Sistemas Corporativos</div>  
+    <div class="complementar" id= "gqs"> Gestão da Qualidade de Software</div>  
+    <div class="optativa"> Optativa</div> 
+    <div class="complementar" id= "sd"> Sistemas Distribuídos</div> 
+    <div class="complementar" id= "auditoria">Auditoria e Segurança de Sistemas</div> 
+    <div class="complementar" id= "sag"> Sistemas de Apoio a Gestão</div> 
+    <div class="complementar" id= "ia">Inteligência Artificial e Sistemas Especialistas</div> 
+    
+    
+  </div>
+  <div class="periodo"> 
+    <div class="profissional" id= "tcc">TCC</div> 
+    <div class="estagio" id= "estagio"> Estágio Supervisionado</div> 
+  </div>
+
+ 
+
+{% endblock content %}
+</body>
+</html>
+

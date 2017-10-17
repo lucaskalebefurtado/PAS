@@ -14,6 +14,7 @@ from django.contrib.auth.models import User
 
 
 
+
 def index(request):
     return render(request,'index.html')
 
@@ -28,13 +29,31 @@ def user_login(request):
 
 			if user is not None:
 				LoginForm(request, user)
-				return HttpResponseRedirect('restrita.html')
+				return HttpResponseRedirect('telauser')
 	else:
 		form = LoginForm()
 	context_dict = {'form': form}
 	return render(request, 'login.html', context=context_dict)
+def fluxograma(request):
+	return render(request,'fluxograma.html')
 
+def cadastro(request):
+	if request.method == 'POST':
+		form = AlunoForm(request.POST)
 
+		if form.is_valid():
+			username = form.cleaned_data['username']
+			senha = form.cleaned_data['password']
+			
+			User.objects.create_user( username=username,
+			password=senha)
+
+			return HttpResponseRedirect('login.html')
+
+	else:
+		form = AlunoForm()
+	context_dict = {'form': form}
+	return render(request, 'cadastro.html', context=context_dict)
 
 
 @login_required
@@ -42,25 +61,10 @@ def restricted_area(request):
 	return render(request, 'restrita.html')
 
 @login_required
-def fluxograma(request):
-	return render(request,'fluxograma.html')
+def telauser(request):
+	return render(request, 'telaUsuario.html')
 
 
-def cadastro(request):
-	if request.method == 'POST':
-		form = AlunoForm(request.POST)
-
-		if form.is_valid():
-			matricula = form.cleaned_data['username']
-			senha = form.cleaned_data['password']
-			User.objects.create_user (matricula, password=senha)
-
-			return HttpResponseRedirect('/index')
-
-	else:
-		form = AlunoForm()
-	context_dict = {'form': form}
-	return render(request, 'cadastro.html', context=context_dict)
 
 
 

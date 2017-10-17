@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% load staticfiles %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+      <div class="container">
+      	<div class="form-horizontal">
+      		
+			
+			<form class="form-horizontal" action="{% url 'cadastro' %}" method="post" role="form">
+      	<div class="field-title"><br><br><br><br>
+				{% csrf_token %}
+
+				<label for="userLogin">  Nome de usuário</label>
+        <input class="form-control ls-login-bg-login input-lg" id="Login" type="login" aria-label="Senha" placeholder="Login" {{ form.username }}
+        <br>
+
+        <label for="userPassword">Senha</label>
+      	<input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha" {{ form.password }}
+      	</div>
+
+        <br><br>
+        
+        <button  type="submit" class="btn btn-primary">cadastrar aluno</button>
+      
+              
+      	</form>
+      	
+      	</div>
+      </div>
+
+  {% endblock %}
+
+</html>

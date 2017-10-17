@@ -1,4 +1,4 @@
-.div{
+.periodo{
 	width: 140px;
 	height: auto;
     padding: 10px;
@@ -6,12 +6,10 @@
  }
 
 
-
-
 .profissional{
 	position: left	;
 	border-style: solid;
-    border-color: black;
+  border-color: black;
 	width: 100%;
 	font-family: Helvetica;
 	vertical-align: center;
@@ -25,7 +23,7 @@
 .optativa{
 	position: relative;
 	border-style: solid;
-    border-color: yellow;
+  border-color: yellow;
 	width: 100%;
 	height: auto;
 	vertical-align: center;	
@@ -59,11 +57,10 @@
 .estagio{
 	position: relative;
 	border-style: solid;
-    border-color: green;
+  border-color: green;
 	width: 100%;
 	height: auto;
 	vertical-align: center;
-	
 	font-family: Helvetica;
 	vertical-align: center;
 	text-align: center;
@@ -75,9 +72,9 @@
 .dependente{
 	position: relative;
 	border-style: solid;
-    border-color: green;
-    background-color: red;
-    font-color: black;
+  border-color: green;
+  background-color: orange;
+  font-color: black;
 	width: 100%;
 	height: auto;
 	vertical-align: center;	
@@ -90,7 +87,7 @@
 }
 
 .fonte{
-	background-color: green;
+	background-color: grey;
 }
 
 
@@ -266,3 +263,5 @@
         font-size: 150px;
     }
   }
+
+  
