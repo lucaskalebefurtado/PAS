@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+<title>My Way</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("/w3images/mac.jpg");
+    min-height: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card-2" id="myNavbar">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="/myway/telauser/#MinhasDiciplinas" class="w3-bar-item w3-button">MINHAS DISCIPLINAS</a>
+      <a href="/myway/telauser/#meuFluxograma" class="w3-bar-item w3-button"><i class=""></i> MEU FLUXOGRAMA</a>
+      <a href="/myway/forumDoCurso" class="w3-bar-item w3-button"></i> FÓRUM DO CURSO</a>
+      <a href="/myway/perfil" class="w3-bar-item w3-button"><i class=""></i>PERFIL</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card-2 w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="#MinhasDiciplinas" onclick="w3_close()" class="w3-bar-item w3-button">MINHAS DICIPLINAS</a>
+  <a href="#meuFluxograma" onclick="w3_close()" class="w3-bar-item w3-button">MEU FLUXOGRAMA</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+{% block content %}
+
+
+
+{% endblock content %}
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

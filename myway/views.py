@@ -63,6 +63,12 @@ def restricted_area(request):
 @login_required
 def telauser(request):
 	return render(request, 'telaUsuario.html')
+@login_required
+def perfil(request):
+	return render(request, 'perfil.html')
+
+
+
 
 
 

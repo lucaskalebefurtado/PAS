@@ -8,4 +8,5 @@ urlpatterns = [
 	url(r'^cadastro', views.cadastro, name='cadastro'), 
 	url (r'^fluxograma', views.fluxograma, name='fluxograma'),	
 	url(r'^restrita', views.restricted_area,name='restrited_area'),
-	url(r'^telauser', views.telauser,name='telauser'),]
+	url(r'^telauser', views.telauser,name='telauser'),
+	url(r'^perfil', views.perfil, name= 'perfil')]
