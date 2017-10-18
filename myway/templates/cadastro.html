@@ -13,7 +13,8 @@
 </head>
 <body>
 
-
+    <center>
+      <br><br><br><br><br><br>
       <div class="container">
       	<div class="form-horizontal">
       		
@@ -22,26 +23,28 @@
       	<div class="field-title"><br><br><br><br>
 				{% csrf_token %}
 
-				<label for="userLogin">  Nome de usuário</label>
-        <input class="form-control ls-login-bg-login input-lg" id="Login" type="login" aria-label="Senha" placeholder="Login" {{ form.username }}
+				<label for="userLogin">Nome de usuário: </label>
+        <input class="form-control ls-login-bg-login input-lg" id="Login" type="login" aria-label="Senha" placeholder="Nome de usuário" {{ form.username }}
         <br>
 
         
 
-        <label for="userPassword">Senha</label>
+        <label for="userPassword">Senha: </label>
       	<input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha" {{ form.password }}
       	</div>
 
         <br><br>
         
-        <button  type="submit" class="btn btn-primary">cadastrar aluno</button>
+        <button  type="submit" class="btn btn-primary">CADASTRAR</button>
       
-              
+        <style>
+          .form-control { width:300px;}
+          </style>      
       	</form>
       	
       	</div>
       </div>
-
+    </center>
   {% endblock %}
 
 </html>

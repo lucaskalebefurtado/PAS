@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-
+from django.db.models import DEFERRED
 
 
 
@@ -74,8 +74,21 @@ def telauser(request):
 def perfil(request):
 	return render(request, 'perfil.html')
 
+@login_required
+def editarUser (request):
+	if request.method == 'POST':
+		form = AlunoForm(data=request.POST, instance=request.user)
+		if form.is_valid():
+			username = form.cleaned_data['username']
+			senha = form.cleaned_data['password']
 
-
+			User.objects.create_user( username=username, 
+			password=senha)
+			return HttpResponseRedirect('telauser.html')
+	else:
+		form = AlunoForm()
+		context_dict = {'form': form}
+		return render (request, 'editarUser.html', context=context_dict)
 
 
 

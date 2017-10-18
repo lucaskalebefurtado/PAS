@@ -11,20 +11,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-
-
+    <center>
+      <br><br><br><br><br><br>
       <div class="container">
       	<div class="form-horizontal">
       		<form action="{% url 'login' %}" method="post" role="form">
 		<div class="field-title"><br><br><br><br>
 		{% csrf_token %}
 
-		<label for="userLogin">  Nome de usuário</label>
-        <input class="form-control ls-login-bg-login input-lg" id="Login" type="login" aria-label="Senha" placeholder="Login" {{ form.username }}
+		<label for="userLogin">Nome de usuário:</label>
+        <input class="form-control ls-login-bg-login input-lg" id="Login" type="login" aria-label="Senha" placeholder="Login" {{ form.username }} 
         <br>
 
-        <label for="userPassword">Senha</label>
+        <label for="userPassword">Senha:</label>
       	<input class="form-control ls-login-bg-password input-lg" id="userPassword" type="password" aria-label="Senha" placeholder="Senha" {{ form.password }}
       	</div>
 
@@ -32,16 +33,22 @@
         <div>
           <button  type="submit" class="btn btn-primary">LOGIN</button>
 
-          <p class="txt-center ls-login-signup">Não possui conta na My way?
-            <a href="cadastro.html">Cadastre-se agora</a>
+          <br><br><br>
+
+          <p class="txt-center ls-login-signup">Não possui conta no My way?
+            <a href="cadastro.html">Cadastre-se agora!</a>
           </p>
+
+          <style>
+          .form-control { width:300px;}
+          </style>
       </div>
               
       	</form>
       	
       	</div>
       </div>
-
+      </center>
   {% endblock %}
 
 </html>
